@@ -1,23 +1,26 @@
 COMPONENT_ADD_INCLUDEDIRS                   := \
-	$(COMPONENT_PATH)/examples/platforms       \
-	$(COMPONENT_PATH)/include                  \
-	$(COMPONENT_PATH)/src/core                 \
-	$(COMPONENT_PATH)/src/ncp                  \
+	examples/platforms                         \
+	include                                    \
+	src/core                                   \
+	src/ncp                                    \
 
-COMPONENT_SRCDIRS := \
-	$(COMPONENT_PATH)/src/cli                  \
-	$(COMPONENT_PATH)/src/core                 \
-	$(COMPONENT_PATH)/src/core/api             \
-	$(COMPONENT_PATH)/src/core/coap            \
-	$(COMPONENT_PATH)/src/core/common          \
-	$(COMPONENT_PATH)/src/core/crypto          \
-	$(COMPONENT_PATH)/src/core/mac             \
-	$(COMPONENT_PATH)/src/core/meshcop         \
-	$(COMPONENT_PATH)/src/core/net             \
-	$(COMPONENT_PATH)/src/core/thread          \
-	$(COMPONENT_PATH)/src/core/utils           \
-	$(COMPONENT_PATH)/src/ncp                  \
-	$(COMPONENT_PATH)/examples/platforms/utils \
+COMPONENT_PRIV_INCLUDEDIRS := \
+	src
+
+COMPONENT_SRCDIRS         := \
+	src/cli                  \
+	src/core                 \
+	src/core/api             \
+	src/core/coap            \
+	src/core/common          \
+	src/core/crypto          \
+	src/core/mac             \
+	src/core/meshcop         \
+	src/core/net             \
+	src/core/thread          \
+	src/core/utils           \
+	src/ncp                  \
+	examples/platforms/utils \
 
 CFLAGS                                                                      += \
     -D_GNU_SOURCE                                                              \
@@ -25,8 +28,7 @@ CFLAGS                                                                      += \
     -DOPENTHREAD_FTD=1                                                         \
     -DOPENTHREAD_PROJECT_CORE_CONFIG_FILE=\"openthread-core-esp32-config.h\"   \
     -DSPINEL_PLATFORM_HEADER=\"spinel_platform.h\"                             \
-    -Wno-error=non-virtual-dtor                                                \
-    $(NULL)
+    -Wno-error=non-virtual-dtor
 
 CXXFLAGS                                                                    += \
     -D_GNU_SOURCE                                                              \
@@ -34,8 +36,7 @@ CXXFLAGS                                                                    += \
     -DOPENTHREAD_FTD=1                                                         \
     -DOPENTHREAD_PROJECT_CORE_CONFIG_FILE=\"openthread-core-esp32-config.h\"   \
     -DSPINEL_PLATFORM_HEADER=\"spinel_platform.h\"                             \
-    -Wno-error=non-virtual-dtor                                                \
-    $(NULL)
+    -Wno-error=non-virtual-dtor
 
 CPPFLAGS                                                                    += \
     -D_GNU_SOURCE                                                              \
@@ -43,6 +44,5 @@ CPPFLAGS                                                                    += \
     -DOPENTHREAD_FTD=1                                                         \
     -DOPENTHREAD_PROJECT_CORE_CONFIG_FILE=\"openthread-core-esp32-config.h\"   \
     -DSPINEL_PLATFORM_HEADER=\"spinel_platform.h\"                             \
-    -Wno-error=non-virtual-dtor                                                \
-    $(NULL)
+    -Wno-error=non-virtual-dtor
 

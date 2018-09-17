@@ -31,33 +31,33 @@
  *   This file implements the use of mbedTLS.
  */
 
-#include "mbedtls.hpp"
+//#include "mbedtls.hpp"
+//
+//#include <mbedtls/platform.h>
+//
+//#include "common/instance.hpp"
+//
+//#if !OPENTHREAD_ENABLE_MULTIPLE_INSTANCES
+//
+//namespace ot {
+//namespace Crypto {
+//
+//static void *CAlloc(size_t aCount, size_t aSize)
+//{
+//    return Instance::Get().GetHeap().CAlloc(aCount, aSize);
+//}
+//
+//static void Free(void *aPointer)
+//{
+//    Instance::Get().GetHeap().Free(aPointer);
+//}
+//
+//MbedTls::MbedTls(void)
+//{
+//    mbedtls_platform_set_calloc_free(CAlloc, Free);
+//}
 
-#include <mbedtls/platform.h>
+//} // namespace Crypto
+//} // namespace ot
 
-#include "common/instance.hpp"
-
-#if !OPENTHREAD_ENABLE_MULTIPLE_INSTANCES
-
-namespace ot {
-namespace Crypto {
-
-static void *CAlloc(size_t aCount, size_t aSize)
-{
-    return Instance::Get().GetHeap().CAlloc(aCount, aSize);
-}
-
-static void Free(void *aPointer)
-{
-    Instance::Get().GetHeap().Free(aPointer);
-}
-
-MbedTls::MbedTls(void)
-{
-    mbedtls_platform_set_calloc_free(CAlloc, Free);
-}
-
-} // namespace Crypto
-} // namespace ot
-
-#endif // #if !OPENTHREAD_ENABLE_MULTIPLE_INSTANCES
+//#endif // #if !OPENTHREAD_ENABLE_MULTIPLE_INSTANCES

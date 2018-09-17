@@ -36,6 +36,7 @@
 #include "dtls.hpp"
 
 #include <mbedtls/debug.h>
+#include <mbedtls/ssl.h>
 #include <openthread/platform/radio.h>
 
 #include "common/code_utils.hpp"

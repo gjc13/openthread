@@ -415,7 +415,7 @@ private:
     Settings mSettings;
 
 #if !OPENTHREAD_ENABLE_MULTIPLE_INSTANCES
-    Crypto::MbedTls mMbedTls;
+    //Crypto::MbedTls mMbedTls;
     Utils::Heap     mHeap;
 #endif
 
