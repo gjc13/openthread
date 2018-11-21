@@ -45,8 +45,6 @@
 #ifndef AES_ALT_SOFT_H
 #define AES_ALT_SOFT_H
 
-#include <openthread-core-config.h>
-
 #include <stddef.h>
 #include <stdint.h>
 

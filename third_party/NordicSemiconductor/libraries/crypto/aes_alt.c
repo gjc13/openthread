@@ -44,7 +44,6 @@
 
 #include "mbedtls/aes.h"
 
-#include <openthread-core-config.h>
 #include <string.h>
 
 #ifdef MBEDTLS_AES_ALT

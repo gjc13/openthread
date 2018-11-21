@@ -33,8 +33,6 @@
 #include "crys_rnd.h"
 #include "sns_silib.h"
 
-#include <openthread/platform/logging.h>
-
 CRYS_RND_State_t     m_rndState;
 CRYS_RND_WorkBuff_t  m_rndWorkBuff;
 
@@ -62,13 +60,13 @@ void nrf5CryptoInit(void)
     CC310_OPERATION(SaSi_LibInit(), sa_result);
     if (sa_result != SA_SILIB_RET_OK)
     {
-        otPlatLog(OT_LOG_LEVEL_CRIT, OT_LOG_REGION_PLATFORM, "Failed SaSi_LibInit - ret = 0x%x", sa_result);
+        //otPlatLog(OT_LOG_LEVEL_CRIT, OT_LOG_REGION_PLATFORM, "Failed SaSi_LibInit - ret = 0x%x", sa_result);
     }
 
     CC310_OPERATION(CRYS_RndInit(pRndState, pRndWorkBuff), crys_result);
     if (crys_result != CRYS_OK)
     {
-        otPlatLog(OT_LOG_LEVEL_CRIT, OT_LOG_REGION_PLATFORM, "Failed CRYS_RndInit - ret = 0x%x", crys_result);
+        //otPlatLog(OT_LOG_LEVEL_CRIT, OT_LOG_REGION_PLATFORM, "Failed CRYS_RndInit - ret = 0x%x", crys_result);
     }
 }
 
