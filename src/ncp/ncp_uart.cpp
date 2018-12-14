@@ -195,23 +195,10 @@ exit:
 
     if (len > 0)
     {
-#if OPENTHREAD_UART_LOCK
-        if (otPlatUartLockAcquire() != OT_ERROR_NONE)
-        {
-            assert(false);
-        }
-#endif
         if (otPlatUartSend(mUartBuffer.GetFrame(), len) != OT_ERROR_NONE)
         {
             assert(false);
         }
-
-#if OPENTHREAD_UART_LOCK
-        if (otPlatUartLockRelease() != OT_ERROR_NONE)
-        {
-            assert(false);
-        }
-#endif
     }
 }
 
